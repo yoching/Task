@@ -15,6 +15,7 @@
 		E3D8975B208CC5F4002D728D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D8975A208CC5F4002D728D /* Quick.framework */; };
 		E3D8975E208CC627002D728D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E3D89758208CC5F2002D728D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3D8975F208CC62A002D728D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E3D8975A208CC5F4002D728D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3D89761208CC6B7002D728D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D89760208CC6B7002D728D /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E3D89755208CC53E002D728D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		E3D89758208CC5F2002D728D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E3D8975A208CC5F4002D728D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		E3D89760208CC6B7002D728D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				E312CE5A2088A10300925D74 /* Task.h */,
 				E312CE5B2088A10300925D74 /* Info.plist */,
+				E3D89760208CC6B7002D728D /* Task.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				TargetAttributes = {
 					E312CE562088A10300925D74 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					E312CE5F2088A10300925D74 = {
 						CreatedOnToolsVersion = 9.3;
@@ -251,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D89761208CC6B7002D728D /* Task.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +401,7 @@
 		E312CE6C2088A10300925D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -416,6 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yoshikuni-web.Task";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,6 +431,7 @@
 		E312CE6D2088A10300925D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -452,6 +460,7 @@
 		E312CE6F2088A10300925D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,6 +482,7 @@
 		E312CE702088A10300925D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
